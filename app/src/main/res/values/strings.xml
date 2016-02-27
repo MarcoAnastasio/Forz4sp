@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Forza quattro</string>
+    <string name="play_string">Gioca</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+
+    <string name="title_activity_full_screen_game">FullScreenGame</string>
+</resources>
