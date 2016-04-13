@@ -1,12 +1,12 @@
-package it.unical.mat.forz4sp.Core;
+package it.unical.mat.forz4sprefactoring.Core;
 
 import android.content.Context;
 import android.widget.LinearLayout;
-import it.unical.mat.forz4sp.Core.Facts.Chose_fact;
-import it.unical.mat.forz4sp.Core.Facts.CurrentPlayer_fact;
-import it.unical.mat.forz4sp.Core.Facts.Played_fact;
-import it.unical.mat.forz4sp.Core.Facts.Player_fact;
-import it.unical.mat.forz4sp.GUI.Components.CustomCellColumn;
+import it.unical.mat.forz4sprefactoring.Core.Facts.Chose_fact;
+import it.unical.mat.forz4sprefactoring.Core.Facts.CurrentPlayer_fact;
+import it.unical.mat.forz4sprefactoring.Core.Facts.Played_fact;
+import it.unical.mat.forz4sprefactoring.Core.Facts.Player_fact;
+import it.unical.mat.forz4sprefactoring.GUI.Components.CustomCellColumn;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;

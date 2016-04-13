@@ -1,4 +1,4 @@
-package it.unical.mat.forz4sp.Core.Facts;
+package it.unical.mat.forz4sprefactoring.Core.Facts;
 
 
 import it.unical.mat.embasp.mapper.Predicate;

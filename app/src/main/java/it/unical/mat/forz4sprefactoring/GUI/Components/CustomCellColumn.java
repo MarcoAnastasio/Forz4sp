@@ -1,10 +1,10 @@
-package it.unical.mat.forz4sp.GUI.Components;
+package it.unical.mat.forz4sprefactoring.GUI.Components;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import it.unical.mat.forz4sp.Core.GameManager;
+import it.unical.mat.forz4sprefactoring.Core.GameManager;
 
 /**
  * Created by haze on 1/6/16.

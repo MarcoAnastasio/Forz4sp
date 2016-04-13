@@ -1,8 +1,8 @@
-package it.unical.mat.forz4sp.Core;
+package it.unical.mat.forz4sprefactoring.Core;
 
 import android.content.Context;
 
-import it.unical.mat.forz4sp.Core.Facts.Chose_fact;
+import it.unical.mat.forz4sprefactoring.Core.Facts.Chose_fact;
 
 import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;

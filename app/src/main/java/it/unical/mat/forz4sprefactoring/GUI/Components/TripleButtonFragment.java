@@ -1,4 +1,4 @@
-package it.unical.mat.forz4sp.GUI.Components;
+package it.unical.mat.forz4sprefactoring.GUI.Components;
 
 import android.app.Fragment;
 import android.os.Bundle;

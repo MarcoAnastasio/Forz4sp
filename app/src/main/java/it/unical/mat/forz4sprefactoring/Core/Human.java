@@ -1,4 +1,4 @@
-package it.unical.mat.forz4sp.Core;
+package it.unical.mat.forz4sprefactoring.Core;
 
 
 public class Human extends Player{

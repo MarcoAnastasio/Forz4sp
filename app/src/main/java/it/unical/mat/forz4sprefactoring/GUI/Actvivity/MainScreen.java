@@ -1,12 +1,12 @@
-package it.unical.mat.forz4sp.GUI.Actvivity;
+package it.unical.mat.forz4sprefactoring.GUI.Actvivity;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import it.unical.mat.forz4sp.GUI.Components.SingleButtonFragment;
-import it.unical.mat.forz4sp.GUI.Components.TripleButtonFragment;
+import it.unical.mat.forz4sprefactoring.GUI.Components.SingleButtonFragment;
+import it.unical.mat.forz4sprefactoring.GUI.Components.TripleButtonFragment;
 import com.example.haze.forzaQuattro.R;
 
 public class MainScreen extends FragmentActivity{

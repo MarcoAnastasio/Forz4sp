@@ -1,4 +1,4 @@
-package it.unical.mat.forz4sp.GUI.Components;
+package it.unical.mat.forz4sprefactoring.GUI.Components;
 
 import android.content.Context;
 import android.graphics.BlurMaskFilter;
