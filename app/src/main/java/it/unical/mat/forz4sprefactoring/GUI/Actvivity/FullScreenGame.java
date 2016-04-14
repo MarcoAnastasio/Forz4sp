@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
-import it.unical.mat.forz4sprefactoring.Core.Computer;
-import it.unical.mat.forz4sprefactoring.Core.Human;
 import it.unical.mat.forz4sprefactoring.Core.GameManager;
 import it.unical.mat.forz4sprefactoring.GUI.Components.CustomCellColumn;
 import com.example.haze.forzaQuattro.R;

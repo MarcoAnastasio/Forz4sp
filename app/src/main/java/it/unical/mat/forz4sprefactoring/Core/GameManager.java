@@ -13,22 +13,24 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedList;
 
-public class GameManager implements onColumnClick{
+import it.unical.mat.embasp.base;
+
+public class GameManager implements onColumnClick , it.unical.mat.embasp.Callback{
 
     private int current_player=0;
     private LinearLayout grid;
     private File logic_file;
-    private LinkedList<Player> players;
+    private String color_player_1 = "#C390D4" ;
+    private String color_player_2 = "#FFA500" ;
     private Context context;
     public final String logic_filename="computer_logic.asp";
     private boolean finished;
     private final int ROWS = 6;
-    private final int COLUMNS= 7;
+    private final int COLUMNS = 7;
 
     public GameManager(LinearLayout grid) {
         this.grid = grid;
         context = grid.getContext();
-        players = new LinkedList<>();
         finished = false;
         init();
     }
@@ -71,15 +73,6 @@ public class GameManager implements onColumnClick{
         players.getFirst().changeState();
 
     }
-    public void addPlayer(Player player){
-
-        int size = players.size();
-        players.add(player);
-        player.setQueue_number(size);
-        player.addNewFact(new CurrentPlayer_fact(size));
-
-    }
-
 
 
     public void play(String Color , Object facts){
