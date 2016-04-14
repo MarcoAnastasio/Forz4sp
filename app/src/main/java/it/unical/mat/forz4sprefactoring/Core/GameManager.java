@@ -2,6 +2,8 @@ package it.unical.mat.forz4sprefactoring.Core;
 
 import android.content.Context;
 import android.widget.LinearLayout;
+
+import it.unical.mat.embasp.base.Output;
 import it.unical.mat.forz4sprefactoring.Core.Facts.Chose_fact;
 import it.unical.mat.forz4sprefactoring.Core.Facts.CurrentPlayer_fact;
 import it.unical.mat.forz4sprefactoring.Core.Facts.Played_fact;
@@ -11,14 +13,17 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
-import it.unical.mat.embasp.base;
+import it.unical.mat.embasp.base.Callback;
 
-public class GameManager implements onColumnClick , it.unical.mat.embasp.Callback{
+public class GameManager implements onColumnClick , Callback{
 
     private int current_player=0;
     private LinearLayout grid;
+    private int program_index;
+    private AndroidHandler handler;
     private File logic_file;
     private String color_player_1 = "#C390D4" ;
     private String color_player_2 = "#FFA500" ;
@@ -54,6 +59,15 @@ public class GameManager implements onColumnClick , it.unical.mat.embasp.Callbac
                 e.printStackTrace();
             }
         }
+
+        ConcreteInputProgram program = new ConcreteInputProgram();
+
+        program.addFilesPath(logic_file.getPath());
+
+        program.addRawInput("player(0)");
+
+       program_index = handler.addProgram(program);
+
     }
 
 
@@ -63,14 +77,6 @@ public class GameManager implements onColumnClick , it.unical.mat.embasp.Callbac
 
 
     public void start(){
-
-
-        for(int i =0 ; i <players.size();++i) {
-            newFact(new Player_fact(i));
-        }
-
-
-        players.getFirst().changeState();
 
     }
 
@@ -92,10 +98,6 @@ public class GameManager implements onColumnClick , it.unical.mat.embasp.Callbac
 
 
     public void newFact(Object fact){
-        for (Player p : players) {
-            if(p instanceof Computer )
-                p.addNewFact(fact);
-        }
     }
 
 
@@ -109,15 +111,28 @@ public class GameManager implements onColumnClick , it.unical.mat.embasp.Callbac
 
     @Override
     public void click(int Column,int Row) {
+        ConcreteInputProgram c = handler.getInputProgram(program_index);
 
-        Player player = players.get(current_player);
-        if(players.get(current_player) instanceof Human && player.getState()){
-            play(player.getColor(), new Chose_fact(Column,Row,player.getQueue_number()));
+        //TODO with objects
+        c.addRawInput(new Played_fact(Column, Row, current_player).toString());
+
+        CustomCellColumn c = (CustomCellColumn)grid.getChildAt(Column);
+
+        switch(current_player) {
+            case 0:   c.setPlayerSelection(color_player_1); break;
+            case 1:   c.setPlayerSelection(color_player_2); break;
         }
+
+        handler.startAsync(new ArrayList<Integer>() ,new ArrayList<Integer>(),this);
+
     }
 
     private void nextPLayer(){
-        current_player = ++current_player % players.size();
-        players.get(current_player).changeState();
+
+    }
+
+    @Override
+    public void callback(Output o) {
+
     }
 }

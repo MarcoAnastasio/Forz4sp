@@ -1,7 +1,7 @@
 package it.unical.mat.forz4sprefactoring.Core.Facts;
 
-import it.unical.mat.embasp.mapper.Predicate;
-import it.unical.mat.embasp.mapper.Term;
+import it.unical.mat.embasp.asp.Predicate;
+import it.unical.mat.embasp.asp.Term;
 
 /**
  * Created by haze on 1/21/16.

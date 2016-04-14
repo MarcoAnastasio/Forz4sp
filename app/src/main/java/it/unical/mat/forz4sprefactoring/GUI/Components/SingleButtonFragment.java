@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.haze.forzaQuattro.R;
+import it.unical.mat.forz4sprefactoring.R;
 
 /**
  * Created by haze on 12/21/15.

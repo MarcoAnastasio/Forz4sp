@@ -7,7 +7,7 @@ import android.view.View;
 
 import it.unical.mat.forz4sprefactoring.GUI.Components.SingleButtonFragment;
 import it.unical.mat.forz4sprefactoring.GUI.Components.TripleButtonFragment;
-import com.example.haze.forzaQuattro.R;
+import it.unical.mat.forz4sprefactoring.R;
 
 public class MainScreen extends FragmentActivity{
 

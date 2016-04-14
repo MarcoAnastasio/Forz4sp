@@ -49,8 +49,6 @@ public class AndroidHandler extends Handler {
                 input_option_index.add(this.options.get(index));
             }
 
-
-
         }
 
             service.startAsync(c,input_programs,input_option_index);

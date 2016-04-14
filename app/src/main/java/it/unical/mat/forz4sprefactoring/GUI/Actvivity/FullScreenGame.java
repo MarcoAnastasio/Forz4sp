@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 
 import it.unical.mat.forz4sprefactoring.Core.GameManager;
 import it.unical.mat.forz4sprefactoring.GUI.Components.CustomCellColumn;
-import com.example.haze.forzaQuattro.R;
+import it.unical.mat.forz4sprefactoring.R;
 
 import java.io.FileNotFoundException;
 
